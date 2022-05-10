@@ -18,10 +18,10 @@ public class Main {
         Fenkarol fenkarol = new Fenkarol("antihistamine", 12, 25, 20, 2024);
 
         MedicineChest medicineChest = new MedicineChest();
-        medicineChest.addParacetamol(paracetamol1);
-        medicineChest.addParacetamol(paracetamol2);
-        medicineChest.addLoperamide(loperamide);
-        medicineChest.addFenkarol(fenkarol);
+        medicineChest.addMedicines(paracetamol1);
+        medicineChest.addMedicines(paracetamol2);
+        medicineChest.addMedicines(loperamide);
+        medicineChest.addMedicines(fenkarol);
         System.out.println(medicineChest);
 
         double price = Assistance.calculateTotalPrice(medicineChest);
