@@ -45,12 +45,17 @@ public class MedicineChest {
         medicines = temp;
     }
 
+
     public int getMedicinesCount() {
         return medicines.length;
     }
 
     public Medicines getMedicines(int index) {
         return medicines[index];
+    }
+
+    public void setMedicines (int index, Medicines medicine){
+        medicines[index] = medicine;
     }
 
     public void removeMedicines(int index) {
