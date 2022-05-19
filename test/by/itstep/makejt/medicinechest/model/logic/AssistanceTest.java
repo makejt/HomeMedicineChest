@@ -3,7 +3,7 @@ package by.itstep.makejt.medicinechest.model.logic;
 import by.itstep.makejt.medicinechest.model.entity.Fenkarol;
 import by.itstep.makejt.medicinechest.model.entity.Loperamide;
 import by.itstep.makejt.medicinechest.model.entity.Paracetamol;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
+import by.itstep.makejt.medicinechest.model.entity.conteiner.DynamicMedicineChest;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -16,10 +16,10 @@ public class AssistanceTest {
                 "Ukraine");
         Fenkarol fenkarol = new Fenkarol("antihistamine", 11, 25, 30, 2024);
 
-        MedicineChest medicineChest = new MedicineChest();
-        medicineChest.addMedicines(fenkarol);
-        medicineChest.addMedicines(paracetamol);
-        medicineChest.addMedicines(loperamide);
+        DynamicMedicineChest medicineChest = new DynamicMedicineChest();
+        medicineChest.add(fenkarol);
+        medicineChest.add(paracetamol);
+        medicineChest.add(loperamide);
 
         double expected = 16.5;
         double actual = Assistance.calculateTotalPrice(medicineChest);

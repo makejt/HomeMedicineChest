@@ -7,8 +7,8 @@ public class Assistance {
     public static double calculateTotalPrice (MedicineChest medicineChest){
         double total = 0;
 
-        for (int i = 0; i < medicineChest.getMedicinesCount(); i++) {
-            total += medicineChest.getMedicines(i).getPrice();
+        for (int i = 0; i < medicineChest.size(); i++) {
+            total += medicineChest.get(i).getPrice();
         }
         return total;
     }
