@@ -28,34 +28,40 @@ public class Main {
         ListMedicineChest medicineChest = new ListMedicineChest();
 
         medicineChest.add(paracetamol1);
-        medicineChest.add(paracetamol2);
         medicineChest.add(loperamide);
         medicineChest.add(fenkarol);
 
-        MyIterator iterator = new ListMedicineChestIterator(medicineChest);
+//        MyIterator iterator = new ListMedicineChestIterator(medicineChest);
+//
+//        while (iterator.hasNext()) {
+//            System.out.println(iterator.next());
+//        }
+//
+//        iterator.reset();
+//
+//        while (iterator.hasNext()) {
+//            System.out.println(iterator.next());
+//        }
+//
+//        iterator.reset();
 
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
 
-        iterator.reset();
+        System.out.println(medicineChest);
 
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+        double price = Assistance.calculateTotalPrice(medicineChest);
+        System.out.println("\nTotal price of all medicines: " + price);
 
-        iterator.reset();
+        medicineChest.add(paracetamol2);
 
+        System.out.println(medicineChest);
+
+        double price1 = Assistance.calculateTotalPrice(medicineChest);
+        System.out.println("\nTotal price of all medicines: " + price1);
 
 
 //        for (int i = 0; i < medicineChest.size() ; i++) {
 //            System.out.println(medicineChest.get(i));
 //        }
-//      System.out.println(medicineChest);
-//
-
-//        double price = Assistance.calculateTotalPrice(iterable);
-//        System.out.println("\nTotal price of all medicines: " + price);
 
 //        MedicineChestSorter.sort(medicineChest, new SortByPriceAsc());
 //        System.out.print("\nAfter ascending sorting by price - ");
