@@ -3,12 +3,15 @@ package by.itstep.makejt.medicinechest.controller;
 import by.itstep.makejt.medicinechest.model.entity.Fenkarol;
 import by.itstep.makejt.medicinechest.model.entity.Loperamide;
 import by.itstep.makejt.medicinechest.model.entity.Paracetamol;
+import by.itstep.makejt.medicinechest.model.entity.conteiner.FixedMedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.ListMedicineChest;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.FixedMedicineChestIterator;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
 import by.itstep.makejt.medicinechest.model.logic.Assistance;
 import by.itstep.makejt.medicinechest.model.logic.MedicineChestSorter;
 import by.itstep.makejt.medicinechest.model.logic.SortStrategy.SortByExpDateDesc;
 import by.itstep.makejt.medicinechest.model.logic.SortStrategy.SortByPriceAsc;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -28,13 +31,27 @@ public class Main {
         medicineChest.add(loperamide);
         medicineChest.add(fenkarol);
 
-        for (int i = 0; i < medicineChest.size() ; i++) {
-            System.out.println(medicineChest.get(i));
+        MyIterator iterator = new ListMedicineChestIterator(medicineChest);
+
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
         }
 
-  //      System.out.println(medicineChest);
+        iterator.reset();
 
-        double price = Assistance.calculateTotalPrice(medicineChest);
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        iterator.reset();
+
+
+//        for (int i = 0; i < medicineChest.size() ; i++) {
+//            System.out.println(medicineChest.get(i));
+//        }
+//      System.out.println(medicineChest);
+//
+        double price = Assistance.calculateTotalPrice(iterator);
         System.out.println("\nTotal price of all medicines: " + price);
 
 //        MedicineChestSorter.sort(medicineChest, new SortByPriceAsc());

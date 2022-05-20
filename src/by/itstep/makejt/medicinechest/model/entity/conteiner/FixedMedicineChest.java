@@ -2,23 +2,23 @@ package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
 
-public class StaticMedicineChest implements MedicineChest {
+public class FixedMedicineChest implements MedicineChest {
 
     public static final int DEFAULTSIZE = 10;
     private Medicines[] array;
     private int size;
 
-    public StaticMedicineChest() {
+    public FixedMedicineChest() {
         array = new Medicines[DEFAULTSIZE];
         size = 0;
     }
 
-    public StaticMedicineChest(int capacity) {
+    public FixedMedicineChest(int capacity) {
         array = new Medicines[capacity];
         size = 0;
     }
 
-    public StaticMedicineChest(Medicines[] array) {
+    public FixedMedicineChest(Medicines[] array) {
         this.array = array;
         size = array.length;
     }
@@ -43,7 +43,7 @@ public class StaticMedicineChest implements MedicineChest {
         return size == 0;
     }
 
-    public void addMedicines(Medicines medicine) {
+    public void add(Medicines medicine) {
         if (medicine == null) {
             return;
         }
@@ -53,7 +53,7 @@ public class StaticMedicineChest implements MedicineChest {
         }
     }
 
-    public void removeMedicines(int index) {
+    public void remove(int index) {
         if (isEmpty() || (index < 0 && index >= size)) {
             return;
         }
