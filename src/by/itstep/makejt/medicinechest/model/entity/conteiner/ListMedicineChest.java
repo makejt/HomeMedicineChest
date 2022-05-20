@@ -1,8 +1,11 @@
 package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.Iterable;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
 
-public class ListMedicineChest implements MedicineChest {
+public class ListMedicineChest implements MedicineChest, Iterable {
     private Node first;
     private int size;
 
@@ -60,6 +63,11 @@ public class ListMedicineChest implements MedicineChest {
             builder.append("\n").append(temp.medicines);
         }
         return builder.toString();
+    }
+
+    @Override
+    public MyIterator getIterator() {
+        return new ListMedicineChestIterator(this);
     }
 
     private class Node {

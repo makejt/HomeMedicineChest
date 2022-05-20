@@ -6,6 +6,7 @@ import by.itstep.makejt.medicinechest.model.entity.Paracetamol;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.FixedMedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.ListMedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.FixedMedicineChestIterator;
+import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.Iterable;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
 import by.itstep.makejt.medicinechest.model.logic.Assistance;
@@ -46,13 +47,15 @@ public class Main {
         iterator.reset();
 
 
+
 //        for (int i = 0; i < medicineChest.size() ; i++) {
 //            System.out.println(medicineChest.get(i));
 //        }
 //      System.out.println(medicineChest);
 //
-        double price = Assistance.calculateTotalPrice(iterator);
-        System.out.println("\nTotal price of all medicines: " + price);
+
+//        double price = Assistance.calculateTotalPrice(iterable);
+//        System.out.println("\nTotal price of all medicines: " + price);
 
 //        MedicineChestSorter.sort(medicineChest, new SortByPriceAsc());
 //        System.out.print("\nAfter ascending sorting by price - ");
