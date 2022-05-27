@@ -51,4 +51,20 @@ public class Loperamide extends Medicines {
                 ", dosage = " + dosage + ", count = " + count +
                 ", producer='" + producer + '}';
     }
+
+    @Override
+    public int compareTo(Medicines o) {
+        if (getClass() != o.getClass()) {
+            return 1;
+        }
+        Loperamide loperamide = (Loperamide) o;
+        int result = Double.compare(dosage, loperamide.dosage);
+        if (result == 0) {
+            result = count - loperamide.count;
+        }
+        if (result == 0) {
+            result = producer.compareTo(loperamide.producer);
+        }
+        return result;
+    }
 }

@@ -26,4 +26,13 @@ public class Paracetamol extends Medicines {
     public String toString() {
         return "Paracetamol{ " + super.toString() + ", count = " + count + '}';
     }
+
+    @Override
+    public int compareTo(Medicines o) {
+        if (getClass() != o.getClass()) {
+            return 1;
+        }
+        Paracetamol paracetamol = (Paracetamol) o;
+        return count - paracetamol.count;
+    }
 }

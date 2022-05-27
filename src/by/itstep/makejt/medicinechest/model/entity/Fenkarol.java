@@ -41,4 +41,18 @@ public class Fenkarol extends Medicines {
                 '}';
     }
 
+    @Override
+    public int compareTo(Medicines o) {
+        if (getClass() != o.getClass()){
+            return 1;
+        }
+        Fenkarol fenkarol = (Fenkarol) o;
+        int result = Double.compare(dosage, fenkarol.dosage);
+
+        if (result == 0) {
+            result = count - fenkarol.count;
+        }
+
+        return result;
+    }
 }

@@ -1,6 +1,8 @@
 package by.itstep.makejt.medicinechest.model.entity.abstracts;
 
-public class Medicines {
+import java.util.Objects;
+
+public class Medicines implements Comparable<Medicines> {
 
     private String pharmGroup;
     private double price;
@@ -46,5 +48,35 @@ public class Medicines {
     @Override
     public String toString() {
         return "pharmGroup = " + pharmGroup + ", price = " + price + ", expDate = " + expDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Medicines medicines = (Medicines) o;
+        return Double.compare(price, medicines.price) == 0
+                && expDate == medicines.expDate && Objects.equals(pharmGroup, medicines.pharmGroup);
+    }
+
+    @Override
+    public int hashCode() {
+        int prime = 31;
+        int result = prime + Objects.hash(pharmGroup);
+        result = result * prime + Objects.hash(price);
+        result = result * prime + Objects.hash(expDate);
+        return result;
+    }
+
+    @Override
+    public int compareTo(Medicines o) {
+        int result = Double.compare(price, o.price);
+        if (result == 0) {
+            result = expDate - o.expDate;
+        }
+        if (result == 0) {
+            result = pharmGroup.compareTo(o.pharmGroup);
+        }
+        return result;
     }
 }
