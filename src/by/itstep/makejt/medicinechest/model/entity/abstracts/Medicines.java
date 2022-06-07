@@ -10,7 +10,9 @@ public class Medicines implements Comparable<Medicines> {
 
 
     public Medicines() {
-
+        pharmGroup = "no name";
+        price = 0;
+        expDate = 2022;
     }
 
     public Medicines(String pharmGroup, double price, int expDate) {

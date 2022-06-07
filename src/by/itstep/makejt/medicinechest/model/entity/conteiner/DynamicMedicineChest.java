@@ -2,10 +2,11 @@ package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.DynamicMedicineChestIterator;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.Iterable;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
 
-public class DynamicMedicineChest implements MedicineChest, Iterable {
+import java.util.Iterator;
+
+
+public class DynamicMedicineChest implements MedicineChest, Iterable<Medicines> {
 
     private Medicines[] medicines;
 
@@ -71,7 +72,7 @@ public class DynamicMedicineChest implements MedicineChest, Iterable {
     }
 
     @Override
-    public MyIterator getIterator() {
+    public Iterator<Medicines> iterator() {
         return new DynamicMedicineChestIterator(this);
     }
 }

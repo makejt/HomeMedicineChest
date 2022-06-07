@@ -3,7 +3,9 @@ package by.itstep.makejt.medicinechest.model.entity.iteratorpattern;
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.ListMedicineChest;
 
-public class ListMedicineChestIterator implements MyIterator {
+import java.util.Iterator;
+
+public class ListMedicineChestIterator implements Iterator<Medicines> {
 
     private ListMedicineChest medicineChest;
     private int current;
@@ -22,7 +24,6 @@ public class ListMedicineChestIterator implements MyIterator {
         return current < medicineChest.size();
     }
 
-    @Override
     public void reset() {
         current = 0;
     }

@@ -5,11 +5,9 @@ import by.itstep.makejt.medicinechest.model.entity.Loperamide;
 import by.itstep.makejt.medicinechest.model.entity.Paracetamol;
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
 import by.itstep.makejt.medicinechest.model.entity.comparators.SortDesc;
+import by.itstep.makejt.medicinechest.model.entity.conteiner.DynamicMedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.FixedMedicineChest;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.ListMedicineChest;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.FixedMedicineChestIterator;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
+import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
 import by.itstep.makejt.medicinechest.model.logic.Assistance;
 import by.itstep.makejt.medicinechest.model.logic.MedicineChestSorter;
 import by.itstep.makejt.medicinechest.model.logic.SortStrategy.SortByExpDateDesc;
@@ -20,63 +18,53 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        Paracetamol paracetamol1 = new Paracetamol("febrifuge", 3.5, 5, 2025);
-        Paracetamol paracetamol2 = new Paracetamol("febrifuge", 5.5, 3, 2025);
+        Paracetamol paracetamol1 = new Paracetamol("febrifuge", 1.5, 5, 2020);
+        Paracetamol paracetamol2 = new Paracetamol("febrifuge", 5.5, 3, 2024);
 
-        Loperamide loperamide = new Loperamide("antidiarrhoeal", 7.5, 2, 2, 2025,
+        Loperamide loperamide = new Loperamide("antidiarrhoeal", 7.5, 2, 2, 2023,
                 "Ukraine");
 
-        Fenkarol fenkarol1 = new Fenkarol("antihistamine", 3.5, 25, 20, 2025);
-        Fenkarol fenkarol2 = new Fenkarol("antihistamine", 3.5, 35, 20, 2025);
+        Fenkarol fenkarol1 = new Fenkarol("antihistamine", 4.5, 25, 20, 2025);
+        Fenkarol fenkarol2 = new Fenkarol("antihistamine", 4.5, 35, 20, 2022);
 
-//        ListMedicineChest medicineChest = new ListMedicineChest();
-//
-//        medicineChest.add(paracetamol1);
-//        medicineChest.add(loperamide);
-//        medicineChest.add(fenkarol);
-
-        Set<Medicines> set = new TreeSet<>(new SortDesc());
-        Collections.addAll(set, loperamide, paracetamol1, paracetamol2, fenkarol1, fenkarol2);
-        System.out.println(set);
+// метод Set() для ListMedicineChest - ? Мои контейнеры и библиотечные
+        // можно ли декоратор применить
 
 
-//        MyIterator iterator = new ListMedicineChestIterator(medicineChest);
-//
-//        while (iterator.hasNext()) {
-//            System.out.println(iterator.next());
-//        }
-//
-//        iterator.reset();
-//
-//        while (iterator.hasNext()) {
-//            System.out.println(iterator.next());//        }
-//
-//        iterator.reset();
+ // TreeSet с компоратором SortDesc - верно сортирует по убыванию, без компоратора - неверно
+        Set<Medicines> medicineChest = new TreeSet<>(new SortDesc());
+        Collections.addAll(medicineChest, loperamide, paracetamol1, paracetamol2, fenkarol1, fenkarol2);
+
+        System.out.println("Medicine chest: " + "\n" + medicineChest);
 
 
-//        System.out.println(medicineChest);
-//
-//        double price = Assistance.calculateTotalPrice(medicineChest);
-//        System.out.println("\nTotal price of all medicines: " + price);
-//
-//        medicineChest.add(paracetamol2);
-//
-//        System.out.println(medicineChest);
-//
-//        double price1 = Assistance.calculateTotalPrice(medicineChest);
-//        System.out.println("\nTotal price of all medicines: " + price1);
-//
+        // get total price of medicines - работает
+        double price = Assistance.calculateTotalPrice(medicineChest);
+        System.out.println("\nTotal price of all medicines: " + price + "\n");
 
-//        for (int i = 0; i < medicineChest.size() ; i++) {
-//            System.out.println(medicineChest.get(i));
-//        }
+        FixedMedicineChest medicineChest1 = new FixedMedicineChest();
+        medicineChest1.add(loperamide);
+        medicineChest1.add(paracetamol1);
+        medicineChest1.add(paracetamol2);
+        medicineChest1.add(fenkarol1);
+        medicineChest1.add(fenkarol2);
 
-//        MedicineChestSorter.sort(medicineChest, new SortByPriceAsc());
-//        System.out.print("\nAfter ascending sorting by price - ");
-//        System.out.println(medicineChest);
-//
-//        MedicineChestSorter.sort(medicineChest, new SortByExpDateDesc());
-//        System.out.print("\nAfter descending sorting by expiration date - ");
-//        System.out.println(medicineChest);
+        // get expired medicines - неверно работает c FixedMedicineChest, exception с TreeSet
+        System.out.println("Expired medicines: " + Assistance.getExpiredMedicines(medicineChest1) + "\n");
+
+        // get cold medicines - добавляет только 1 препарат
+        System.out.println("Cold medicines: " + Assistance.getColdMedicines(medicineChest) + "\n");
+
+
+        // ascending sorting by price - не работает на TreeSet
+        MedicineChestSorter.sort(medicineChest1, new SortByPriceAsc());
+        System.out.print("\nAfter ascending sorting by price - ");
+        System.out.println(medicineChest1);
+
+        // descending sorting by expiration date
+        MedicineChestSorter.sort(medicineChest1, new SortByExpDateDesc());
+        System.out.print("\nAfter descending sorting by expiration date - ");
+        System.out.println(medicineChest1);
+
     }
 }

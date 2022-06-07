@@ -1,20 +1,46 @@
 package by.itstep.makejt.medicinechest.model.logic;
 
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.Iterable;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Assistance {
 
-    public static double calculateTotalPrice(Iterable iterable) {
+    public static double calculateTotalPrice(Iterable<Medicines> iterable) {
 
-        MyIterator iterator = iterable.getIterator();
-
+        Iterator<Medicines> iterator = iterable.iterator();
         double total = 0;
-
         while (iterator.hasNext()) {
             total += iterator.next().getPrice();
         }
-
         return total;
     }
+
+
+    public static List<Medicines> getExpiredMedicines(Iterable<Medicines> iterable) {
+        Iterator<Medicines> iterator = iterable.iterator();
+        List<Medicines> list = new ArrayList<>();
+        while (iterator.hasNext()) {
+            if (iterator.next().getExpDate() < 2022) {
+                list.add(iterator.next());
+            }
+        }
+        return list;
+    }
+
+
+    public static List<Medicines> getColdMedicines(Iterable<Medicines> iterable) {
+        Iterator<Medicines> iterator = iterable.iterator();
+        List<Medicines> list = new ArrayList<>();
+        while (iterator.hasNext()) {
+            if (iterator.next().getPharmGroup() == "febrifuge" ||
+            iterator.next().getExpDate() >= 2022) {
+                list.add(iterator.next());
+            }
+        }
+        return list;
+    }
+
 }

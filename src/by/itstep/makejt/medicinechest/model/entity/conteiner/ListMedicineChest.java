@@ -1,11 +1,11 @@
 package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.Iterable;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
-import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.MyIterator;
 
-public class ListMedicineChest implements MedicineChest, Iterable {
+import java.util.Iterator;
+
+public class ListMedicineChest implements MedicineChest, Iterable<Medicines> {
     private Node first;
     private int size;
 
@@ -23,14 +23,19 @@ public class ListMedicineChest implements MedicineChest, Iterable {
     }
 
     public Medicines get(int index) {
-        if (isEmpty() || index < 0 || index >= size) {
-            return null;
+            if (isEmpty() || index < 0 || index >= size) {
+                return null;
         }
         Node temp = first;
         for (int i = 0; i < index; i++) {
             temp = temp.next;
         }
         return temp.medicines;
+    }
+
+    @Override
+    public void set(int index, Medicines medicine) {
+
     }
 
     public void add(Medicines medicines) {
@@ -66,7 +71,7 @@ public class ListMedicineChest implements MedicineChest, Iterable {
     }
 
     @Override
-    public MyIterator getIterator() {
+    public Iterator<Medicines> iterator() {
         return new ListMedicineChestIterator(this);
     }
 
@@ -78,4 +83,6 @@ public class ListMedicineChest implements MedicineChest, Iterable {
             this.medicines = medicines;
         }
     }
+
+
 }
