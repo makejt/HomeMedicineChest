@@ -23,18 +23,23 @@ public class Assistance {
         Iterator<Medicines> iterator = iterable.iterator();
         List<Medicines> list = new ArrayList<>();
         while (iterator.hasNext()) {
-            if (iterator.next().getExpDate() < 2022) {
-                list.add(iterator.next());
+            Medicines temp = iterator.next();
+            if (temp.getExpDate() < 2022) {
+                list.add(temp);
             }
         }
+
         return list;
     }
+
+    // для водителя аптечка, сколько денег
 
 
     public static List<Medicines> getColdMedicines(Iterable<Medicines> iterable) {
         Iterator<Medicines> iterator = iterable.iterator();
         List<Medicines> list = new ArrayList<>();
         while (iterator.hasNext()) {
+            Medicines temp = iterator.next();
             if (iterator.next().getPharmGroup() == "febrifuge" ||
             iterator.next().getExpDate() >= 2022) {
                 list.add(iterator.next());

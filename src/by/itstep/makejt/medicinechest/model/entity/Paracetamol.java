@@ -27,12 +27,12 @@ public class Paracetamol extends Medicines {
         return "Paracetamol{ " + super.toString() + ", count = " + count + '}';
     }
 
-    @Override
-    public int compareTo(Medicines o) {
-        if (getClass() != o.getClass()) {
-            return 1;
-        }
-        Paracetamol paracetamol = (Paracetamol) o;
-        return count - paracetamol.count;
-    }
+//    @Override
+//    public int compareTo(Medicines o) {
+//        if (getClass() != o.getClass()) {
+//            return 1;
+//        }
+//        Paracetamol paracetamol = (Paracetamol) o;
+//        return count - paracetamol.count;
+//    }
 }

@@ -27,44 +27,39 @@ public class Main {
         Fenkarol fenkarol1 = new Fenkarol("antihistamine", 4.5, 25, 20, 2025);
         Fenkarol fenkarol2 = new Fenkarol("antihistamine", 4.5, 35, 20, 2022);
 
-// метод Set() для ListMedicineChest - ? Мои контейнеры и библиотечные
-        // можно ли декоратор применить
-
 
  // TreeSet с компоратором SortDesc - верно сортирует по убыванию, без компоратора - неверно
-        Set<Medicines> medicineChest = new TreeSet<>(new SortDesc());
+        Set<Medicines> medicineChest = new TreeSet<>();
         Collections.addAll(medicineChest, loperamide, paracetamol1, paracetamol2, fenkarol1, fenkarol2);
 
         System.out.println("Medicine chest: " + "\n" + medicineChest);
 
-
-        // get total price of medicines - работает
-        double price = Assistance.calculateTotalPrice(medicineChest);
-        System.out.println("\nTotal price of all medicines: " + price + "\n");
-
-        FixedMedicineChest medicineChest1 = new FixedMedicineChest();
-        medicineChest1.add(loperamide);
-        medicineChest1.add(paracetamol1);
-        medicineChest1.add(paracetamol2);
-        medicineChest1.add(fenkarol1);
-        medicineChest1.add(fenkarol2);
-
+//        // get total price of medicines - работает
+//        double price = Assistance.calculateTotalPrice(medicineChest);
+//        System.out.println("\nTotal price of all medicines: " + price + "\n");
+//
+//        FixedMedicineChest medicineChest1 = new FixedMedicineChest();
+//        medicineChest1.add(loperamide);
+//        medicineChest1.add(paracetamol1);
+//        medicineChest1.add(paracetamol2);
+//        medicineChest1.add(fenkarol1);
+//        medicineChest1.add(fenkarol2);
+//
         // get expired medicines - неверно работает c FixedMedicineChest, exception с TreeSet
-        System.out.println("Expired medicines: " + Assistance.getExpiredMedicines(medicineChest1) + "\n");
-
-        // get cold medicines - добавляет только 1 препарат
-        System.out.println("Cold medicines: " + Assistance.getColdMedicines(medicineChest) + "\n");
-
-
-        // ascending sorting by price - не работает на TreeSet
-        MedicineChestSorter.sort(medicineChest1, new SortByPriceAsc());
-        System.out.print("\nAfter ascending sorting by price - ");
-        System.out.println(medicineChest1);
-
-        // descending sorting by expiration date
-        MedicineChestSorter.sort(medicineChest1, new SortByExpDateDesc());
-        System.out.print("\nAfter descending sorting by expiration date - ");
-        System.out.println(medicineChest1);
+        System.out.println("Expired medicines: " + Assistance.getExpiredMedicines(medicineChest) + "\n");
+//
+//        // get cold medicines - добавляет только 1 препарат
+//        System.out.println("Cold medicines: " + Assistance.getColdMedicines(medicineChest) + "\n");
+//
+//        // ascending sorting by price - не работает на TreeSet
+//        MedicineChestSorter.sort(medicineChest1, new SortByPriceAsc());
+//        System.out.print("\nAfter ascending sorting by price - ");
+//        System.out.println(medicineChest1);
+//
+//        // descending sorting by expiration date
+//        MedicineChestSorter.sort(medicineChest1, new SortByExpDateDesc());
+//        System.out.print("\nAfter descending sorting by expiration date - ");
+//        System.out.println(medicineChest1);
 
     }
 }

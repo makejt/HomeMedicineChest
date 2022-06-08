@@ -8,13 +8,14 @@ import java.util.Iterator;
 
 public class DynamicMedicineChest implements MedicineChest, Iterable<Medicines> {
 
+    // конкретный интерфейс - List
     private Medicines[] medicines;
 
     public DynamicMedicineChest() {
         medicines = new Medicines[0];
     }
 
-    public DynamicMedicineChest(Medicines[] medicines) {
+    public DynamicMedicineChest(Medicines[] medicines) { // arraylist
         this();
         if (medicines != null) {
             this.medicines = medicines;

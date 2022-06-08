@@ -2,9 +2,11 @@ package by.itstep.makejt.medicinechest.model.logic.SortStrategy;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
 
-public class SortByExpDateAsc implements MedicinesSortable {
+import java.util.Comparator;
 
-    public boolean compare(Medicines medicines1, Medicines medicines2) {
-        return medicines1.getExpDate() > medicines2.getExpDate();
+public class SortByExpDateAsc implements Comparator<Medicines> {
+
+    public int compare(Medicines medicines1, Medicines medicines2) {
+        return medicines1.getExpDate() - medicines2.getExpDate();
     }
 }
