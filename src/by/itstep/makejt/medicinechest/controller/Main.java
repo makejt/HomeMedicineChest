@@ -49,7 +49,7 @@ public class Main {
         System.out.println("Expired medicines: " + Assistance.getExpiredMedicines(medicineChest) + "\n");
 //
 //        // get cold medicines - добавляет только 1 препарат
-//        System.out.println("Cold medicines: " + Assistance.getColdMedicines(medicineChest) + "\n");
+        System.out.println("Cold medicines: " + Assistance.getColdMedicines(medicineChest) + "\n");
 //
 //        // ascending sorting by price - не работает на TreeSet
 //        MedicineChestSorter.sort(medicineChest1, new SortByPriceAsc());

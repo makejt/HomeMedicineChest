@@ -40,9 +40,9 @@ public class Assistance {
         List<Medicines> list = new ArrayList<>();
         while (iterator.hasNext()) {
             Medicines temp = iterator.next();
-            if (iterator.next().getPharmGroup() == "febrifuge" ||
-            iterator.next().getExpDate() >= 2022) {
-                list.add(iterator.next());
+            if (temp.getPharmGroup() == "febrifuge" &&
+            temp.getExpDate() >= 2022) {
+                list.add(temp);
             }
         }
         return list;
