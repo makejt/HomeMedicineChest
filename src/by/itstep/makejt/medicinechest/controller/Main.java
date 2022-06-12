@@ -10,18 +10,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        Paracetamol p = Paracetamol.SYRUP;
-        p.setCount(10);
-        p.setExpDate(2025);
-//        p.setPharmGroup("febrifuge");
-        p.setPrice(2.50);
 
-        System.out.println(p);
-
-        Paracetamol paracetamol1 =
-                new Paracetamol("febrifuge", 1.5, 2020, 10, "pill");
-        Paracetamol paracetamol2 =
-                new Paracetamol("febrifuge", 5.5, 2024, 1, "suspension");
+//        Paracetamol paracetamol1 =
+//                new Paracetamol("febrifuge", 1.5, 2020, 10, "PILL");
+//        Paracetamol paracetamol2 =
+//                new Paracetamol("febrifuge", 5.5, 2024, 1, "suspension");
         Loperamide loperamide =
                 new Loperamide("antidiarrhoeal", 7.5, 2, 2023, 15,"Ukraine");
         Fenkarol fenkarol1 =
@@ -31,8 +24,8 @@ public class Main {
 
 
         DynamicMedicineChest medicineChest2 = new DynamicMedicineChest();
-        medicineChest2.add(paracetamol1);
-        medicineChest2.add(paracetamol2);
+//        medicineChest2.add(paracetamol1);
+//        medicineChest2.add(paracetamol2);
         medicineChest2.add(loperamide);
         medicineChest2.add(fenkarol1);
         medicineChest2.add(fenkarol2);

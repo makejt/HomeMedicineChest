@@ -4,7 +4,7 @@ import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 
 public class Paracetamol extends Medicine {
 
-    private Form form1;
+    private Form form;
 
 
 //
@@ -16,22 +16,22 @@ public class Paracetamol extends Medicine {
 
     public Paracetamol(String pharmGroup, double price, int expDate, int count, Form form) {
         super(pharmGroup, price, expDate, count);
-        form1 = form;
+        form = form;
     }
 
 
-    public String getForm() {
-        return form;
+//    public String getForm() {
+//        return form;
+//    }
+//
+//    public void setForm(String form) {
+//        this.form = form;
     }
 
-    public void setForm(String form) {
-        this.form = form;
-    }
-
-    @Override
-    public String toString() {
-        return "Paracetamol{ " + super.toString() + ", form = " + form + '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Paracetamol{ " + super.toString() + ", form = " + form + '}';
+//    }
 
 
     enum Form {
@@ -44,8 +44,8 @@ public class Paracetamol extends Medicine {
     }
 
 
-
-}
+//
+//}
 
 //    @Override
 //    public int compareTo(Medicine o) {

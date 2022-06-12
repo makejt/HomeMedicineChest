@@ -53,4 +53,5 @@ public class Loperamide extends Medicine {
         }
         return result;
     }
+
 }
