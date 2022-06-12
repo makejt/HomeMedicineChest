@@ -1,11 +1,11 @@
 package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
-import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.ListMedicineChestIterator;
 
 import java.util.Iterator;
 
-public class ListMedicineChest implements MedicineChest, Iterable<Medicines> {
+public class ListMedicineChest implements MedicineChest, Iterable<Medicine> {
     private Node first;
     private int size;
 
@@ -22,7 +22,7 @@ public class ListMedicineChest implements MedicineChest, Iterable<Medicines> {
         return size == 0;
     }
 
-    public Medicines get(int index) {
+    public Medicine get(int index) {
             if (isEmpty() || index < 0 || index >= size) {
                 return null;
         }
@@ -34,11 +34,11 @@ public class ListMedicineChest implements MedicineChest, Iterable<Medicines> {
     }
 
     @Override
-    public void set(int index, Medicines medicine) {
+    public void set(int index, Medicine medicine) {
 
     }
 
-    public void add(Medicines medicines) {
+    public void add(Medicine medicines) {
         if (isEmpty()) {
             first = new Node(medicines);
         } else {
@@ -71,15 +71,20 @@ public class ListMedicineChest implements MedicineChest, Iterable<Medicines> {
     }
 
     @Override
-    public Iterator<Medicines> iterator() {
+    public void remove(int index) {
+
+    }
+
+    @Override
+    public Iterator<Medicine> iterator() {
         return new ListMedicineChestIterator(this);
     }
 
     private class Node {
-        public Medicines medicines;
+        public Medicine medicines;
         public Node next;
 
-        public Node(Medicines medicines) {
+        public Node(Medicine medicines) {
             this.medicines = medicines;
         }
     }

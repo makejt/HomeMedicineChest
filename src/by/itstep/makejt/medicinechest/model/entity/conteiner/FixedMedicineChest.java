@@ -1,27 +1,27 @@
 package by.itstep.makejt.medicinechest.model.entity.conteiner;
 
-import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 import by.itstep.makejt.medicinechest.model.entity.iteratorpattern.FixedMedicineChestIterator;
+
 import java.util.Iterator;
 
+public class FixedMedicineChest implements MedicineChest, Iterable<Medicine> {
 
-public class FixedMedicineChest implements MedicineChest, Iterable<Medicines> {
-
-    public static final int DEFAULTSIZE = 10;
-    private Medicines[] array;
+    public static final int DEFAULTSIZE = 30;
+    private Medicine[] array;
     private int size;
 
     public FixedMedicineChest() {
-        array = new Medicines[DEFAULTSIZE];
+        array = new Medicine[DEFAULTSIZE];
         size = 0;
     }
 
     public FixedMedicineChest(int capacity) {
-        array = new Medicines[capacity];
+        array = new Medicine[capacity];
         size = 0;
     }
 
-    public FixedMedicineChest(Medicines[] array) {
+    public FixedMedicineChest(Medicine[] array) {
         this.array = array;
         size = array.length;
     }
@@ -34,11 +34,11 @@ public class FixedMedicineChest implements MedicineChest, Iterable<Medicines> {
         return array.length;
     }
 
-    public Medicines get(int index) {
+    public Medicine get(int index) {
         return array[index];
     }
 
-    public void set(int index, Medicines medicines) {
+    public void set(int index, Medicine medicines) {
         array[index] = medicines;
     }
 
@@ -46,7 +46,7 @@ public class FixedMedicineChest implements MedicineChest, Iterable<Medicines> {
         return size == 0;
     }
 
-    public void add(Medicines medicine) {
+    public void add(Medicine medicine) {
         if (medicine == null) {
             return;
         }
@@ -86,7 +86,7 @@ public class FixedMedicineChest implements MedicineChest, Iterable<Medicines> {
 
 
     @Override
-    public Iterator<Medicines> iterator() {
+    public Iterator<Medicine> iterator() {
         return new FixedMedicineChestIterator(this);
     }
 

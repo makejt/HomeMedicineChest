@@ -1,21 +1,19 @@
 package by.itstep.makejt.medicinechest.model.entity;
 
-import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 
-public class Loperamide extends Medicines {
+public class Loperamide extends Medicine {
 
     public double dosage;
-    private int count;
     private String producer;
 
     public Loperamide() {
 
     }
 
-    public Loperamide(String pharmGroup, double price, double dosage, int count, int expDate, String producer) {
-        super(pharmGroup, price, expDate);
+    public Loperamide(String pharmGroup, double price, int count, int expDate, double dosage, String producer) {
+        super(pharmGroup, price, expDate, count);
         this.dosage = dosage;
-        this.count = count;
         this.producer = producer;
     }
 
@@ -28,15 +26,6 @@ public class Loperamide extends Medicines {
         this.dosage = dosage;
     }
 
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
-    }
-
-
     public String getProducer() {
         return producer;
     }
@@ -47,21 +36,18 @@ public class Loperamide extends Medicines {
 
     @Override
     public String toString() {
-        return "Loperamide{" + super.toString() +
-                ", dosage = " + dosage + ", count = " + count +
-                ", producer='" + producer + '}';
+        return "Loperamide{" + super.toString() + ", dosage = " + dosage + ", producer = " + producer;
     }
 
     @Override
-    public int compareTo(Medicines o) {
+    public int compareTo(Medicine o) {
+
         if (getClass() != o.getClass()) {
             return 1;
         }
         Loperamide loperamide = (Loperamide) o;
         int result = Double.compare(dosage, loperamide.dosage);
-        if (result == 0) {
-            result = count - loperamide.count;
-        }
+
         if (result == 0) {
             result = producer.compareTo(loperamide.producer);
         }

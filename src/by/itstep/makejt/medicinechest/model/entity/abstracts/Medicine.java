@@ -2,23 +2,27 @@ package by.itstep.makejt.medicinechest.model.entity.abstracts;
 
 import java.util.Objects;
 
-public class Medicines implements Comparable<Medicines> {
+public class Medicine implements Comparable<Medicine> {
 
     private String pharmGroup;
     private double price;
     private int expDate;
+    private int count;
 
 
-    public Medicines() {
+    public Medicine() {
         pharmGroup = "no name";
         price = 0;
         expDate = 2022;
+        count = 0;
     }
 
-    public Medicines(String pharmGroup, double price, int expDate) {
+    public Medicine(String pharmGroup, double price, int expDate, int count) {
         this.pharmGroup = pharmGroup;
         this.price = price;
         this.expDate = expDate;
+        this.count = count;
+
     }
 
     public String getPharmGroup() {
@@ -47,16 +51,25 @@ public class Medicines implements Comparable<Medicines> {
         this.expDate = expDate;
     }
 
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     @Override
     public String toString() {
-        return "pharmGroup = " + pharmGroup + ", price = " + price + ", expDate = " + expDate;
+        return "pharmGroup = " + pharmGroup + ", price = " + price + ", expDate = " + expDate + ", count = " + count;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Medicines medicines = (Medicines) o;
+        Medicine medicines = (Medicine) o;
         return Double.compare(price, medicines.price) == 0
                 && expDate == medicines.expDate && Objects.equals(pharmGroup, medicines.pharmGroup);
     }
@@ -71,7 +84,7 @@ public class Medicines implements Comparable<Medicines> {
     }
 
     @Override
-    public int compareTo(Medicines o) {
+    public int compareTo(Medicine o) {
         int result = Double.compare(price, o.price);
         if (result == 0) {
             result = expDate - o.expDate;

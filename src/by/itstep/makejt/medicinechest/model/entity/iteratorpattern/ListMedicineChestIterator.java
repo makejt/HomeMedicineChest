@@ -1,11 +1,11 @@
 package by.itstep.makejt.medicinechest.model.entity.iteratorpattern;
 
-import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicines;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.ListMedicineChest;
 
 import java.util.Iterator;
 
-public class ListMedicineChestIterator implements Iterator<Medicines> {
+public class ListMedicineChestIterator implements Iterator<Medicine> {
 
     private ListMedicineChest medicineChest;
     private int current;
@@ -15,7 +15,7 @@ public class ListMedicineChestIterator implements Iterator<Medicines> {
     }
 
     @Override
-    public Medicines next() {
+    public Medicine next() {
         return medicineChest.get(current++);
     }
 
