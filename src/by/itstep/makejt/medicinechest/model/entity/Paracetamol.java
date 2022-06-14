@@ -4,48 +4,52 @@ import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 
 public class Paracetamol extends Medicine {
 
-    private Form form;
+    public Form form;
 
 
-//
-//    public static final Paracetamol PILL = new Paracetamol("pill");
-//    public static final Paracetamol CAPSULE = new Paracetamol("capsule");
-//    public static final Paracetamol SUPPOSITORIES = new Paracetamol("suppositories");
-//    public static final Paracetamol SYRUP = new Paracetamol("syrup");
-//    public static final Paracetamol POWDER = new Paracetamol("powder");
-
-    public Paracetamol(String pharmGroup, double price, int expDate, int count, Form form) {
+    public Paracetamol(String pharmGroup, double price, int expDate, int count, Form f) {
         super(pharmGroup, price, expDate, count);
-        form = form;
+        form = f;
+    }
+
+    public Form getForm() {
+        return form;
+    }
+
+    public void setForm(Form form) {
+        this.form = form;
     }
 
 
-//    public String getForm() {
-//        return form;
-//    }
-//
-//    public void setForm(String form) {
-//        this.form = form;
-    }
-
-//    @Override
-//    public String toString() {
-//        return "Paracetamol{ " + super.toString() + ", form = " + form + '}';
-//    }
-
-
-    enum Form {
-
-        PILL,
-        CAPSULE,
-        SUPPOSITORIES,
-        SYRUP,
-        POWDER
+    @Override
+    public String toString() {
+        return "Paracetamol{ " + super.toString() + ", form = " + form.getName() + '}';
     }
 
 
-//
-//}
+    public enum Form {
+
+        PILL("pill"),
+        CAPSULE("capsule"),
+        SUPPOSITORIES("suppositories"),
+        SYRUP("syrup"),
+        POWDER("powder");
+
+        private String name;
+
+        Form(String name) {
+            this.name = name;
+        }
+
+
+        public String getName() {
+            return name;
+        }
+
+   }
+
+
+}
 
 //    @Override
 //    public int compareTo(Medicine o) {

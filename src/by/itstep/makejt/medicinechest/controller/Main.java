@@ -9,23 +9,25 @@ import by.itstep.makejt.medicinechest.model.logic.Assistance;
 public class Main {
     public static void main(String[] args) {
 
+        Paracetamol paracetamol1 =
+                new Paracetamol("febrifuge", 1.5, 2020, 10, Paracetamol.Form.CAPSULE);
 
+        Paracetamol paracetamol2 =
+                new Paracetamol("febrifuge", 5.5, 2024, 1, Paracetamol.Form.PILL);
 
-//        Paracetamol paracetamol1 =
-//                new Paracetamol("febrifuge", 1.5, 2020, 10, "PILL");
-//        Paracetamol paracetamol2 =
-//                new Paracetamol("febrifuge", 5.5, 2024, 1, "suspension");
         Loperamide loperamide =
                 new Loperamide("antidiarrhoeal", 7.5, 2, 2023, 15,"Ukraine");
+
         Fenkarol fenkarol1 =
                 new Fenkarol("antihistamine", 4.5, 25, 20, 2025);
+
         Fenkarol fenkarol2 =
                 new Fenkarol("antihistamine", 4.5, 35, 20, 2022);
 
 
         DynamicMedicineChest medicineChest2 = new DynamicMedicineChest();
-//        medicineChest2.add(paracetamol1);
-//        medicineChest2.add(paracetamol2);
+        medicineChest2.add(paracetamol1);
+        medicineChest2.add(paracetamol2);
         medicineChest2.add(loperamide);
         medicineChest2.add(fenkarol1);
         medicineChest2.add(fenkarol2);
