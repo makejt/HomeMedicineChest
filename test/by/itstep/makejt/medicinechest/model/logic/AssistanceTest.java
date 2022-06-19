@@ -1,10 +1,5 @@
 package by.itstep.makejt.medicinechest.model.logic;
 
-import by.itstep.makejt.medicinechest.model.entity.Fenkarol;
-import by.itstep.makejt.medicinechest.model.entity.Loperamide;
-import by.itstep.makejt.medicinechest.model.entity.Paracetamol;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.DynamicMedicineChest;
-import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class AssistanceTest {

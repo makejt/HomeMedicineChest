@@ -1,15 +1,20 @@
-package by.itstep.makejt.medicinechest.model.entity;
+package by.itstep.makejt.medicinechest.model.entity.medicines;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
+
+import java.util.Objects;
 
 public class Paracetamol extends Medicine {
 
     public Form form;
 
+    public Paracetamol() {
+        form = Form.PILL;
+    }
 
-    public Paracetamol(String pharmGroup, double price, int expDate, int count, Form f) {
-        super(pharmGroup, price, expDate, count);
-        form = f;
+    public Paracetamol(PharmaGroup pharmaGroup, double price, int expDate, int count, Form form) {
+        super(pharmaGroup, price, expDate, count);
+        this.form = form;
     }
 
     public Form getForm() {
@@ -20,6 +25,19 @@ public class Paracetamol extends Medicine {
         this.form = form;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Paracetamol that = (Paracetamol) o;
+        return form == that.form;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), form);
+    }
 
     @Override
     public String toString() {
@@ -41,21 +59,10 @@ public class Paracetamol extends Medicine {
             this.name = name;
         }
 
-
         public String getName() {
             return name;
         }
 
-   }
-
-
+    }
 }
 
-//    @Override
-//    public int compareTo(Medicine o) {
-////        if (getClass() != o.getClass()) {
-////            return 1;
-////        }
-////        Paracetamol paracetamol = (Paracetamol) o;
-////        return form.compareTo (paracetamol, form);
-////    }
