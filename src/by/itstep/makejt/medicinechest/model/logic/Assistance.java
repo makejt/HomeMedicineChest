@@ -2,37 +2,22 @@ package by.itstep.makejt.medicinechest.model.logic;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Item;
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.ItemsSection;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicinesSection;
-
+import by.itstep.makejt.medicinechest.model.entity.abstracts.MedicineChestComponent;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
 public class Assistance {
 
-    public static double calculateTotalPrice(MedicinesSection section1, ItemsSection section2) {
-
-     return calculateTotalPriceOfItems(section2) + calculateTotalPriceOfMedicines(section1);
-    }
-
-    public static double calculateTotalPriceOfMedicines(Iterable<Medicine> iterable) {
-        Iterator<Medicine> iterator = iterable.iterator();
+    public static double calculateTotalPrice(Iterable<MedicineChestComponent> iterable) {
+        Iterator<MedicineChestComponent> iterator = iterable.iterator();
         double total = 0;
         while (iterator.hasNext()) {
             total += iterator.next().getPrice();
         }
         return total;
     }
-
-    public static double calculateTotalPriceOfItems(Iterable<Item> iterable) {
-        Iterator<Item> iterator = iterable.iterator();
-        double total = 0;
-        while (iterator.hasNext()) {
-            total += iterator.next().getPrice();
-        }
-        return total;
-    }
+    
 
     public static List<Medicine> getExpiredMedicines(Iterable<Medicine> iterable) {
         Iterator<Medicine> iterator = iterable.iterator();

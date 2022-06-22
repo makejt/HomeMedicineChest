@@ -1,7 +1,6 @@
 package by.itstep.makejt.medicinechest.model.logic;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
-import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicinesSection;
 
 import java.util.Comparator;
 
