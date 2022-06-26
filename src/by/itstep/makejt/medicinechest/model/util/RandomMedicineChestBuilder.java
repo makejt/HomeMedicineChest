@@ -1,11 +1,9 @@
 package by.itstep.makejt.medicinechest.model.util;
 
-import by.itstep.makejt.medicinechest.model.entity.comparators.abstracts.Medicine;
-import by.itstep.makejt.medicinechest.model.entity.comparators.abstracts.MedicineChestComponent;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.*;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.items.*;
 import by.itstep.makejt.medicinechest.model.entity.medicines.*;
-
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -73,8 +71,8 @@ public class RandomMedicineChestBuilder {
     public static final double MAX_SCISSORS_PRICE = 10.02;
     public static final double MIN_SCISSORS_PRICE = 3.55;
 
-    public static final int MAX_SCISSORS_SIZE = 5;
-    public static final int MIN_SCISSORS_SIZE = 15;
+    public static final int MAX_SCISSORS_SIZE = 15;
+    public static final int MIN_SCISSORS_SIZE = 5;
 
     public static final double MAX_THERMOMETER_PRICE = 24.87;
     public static final double MIN_THERMOMETER_PRICE = 21.50;
@@ -91,6 +89,7 @@ public class RandomMedicineChestBuilder {
 
     public static MedicineChest createMedicineChest() {
         Random random = new Random();
+        //MedicineChest medicineChest = new MedicineChest(new ArrayList<>(), MedicineChest.Name.ADULT)
         MedicineChest medicineChest = new MedicineChest(new ArrayList<>(),
                 MedicineChest.Name.values()[random.nextInt(MedicineChest.Name.values().length)]);
 

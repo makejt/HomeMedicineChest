@@ -1,4 +1,4 @@
-package by.itstep.makejt.medicinechest.model.logic;
+package by.itstep.makejt.medicinechest.model;
 
 import org.junit.Test;
 

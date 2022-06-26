@@ -1,6 +1,6 @@
 package by.itstep.makejt.medicinechest.model.util;
 
-import by.itstep.makejt.medicinechest.model.entity.comparators.abstracts.Medicine;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.items.*;
 import by.itstep.makejt.medicinechest.model.entity.medicines.*;
