@@ -1,9 +1,11 @@
 package by.itstep.makejt.medicinechest.model.util;
 
+import by.itstep.makejt.medicinechest.model.entity.MedicineComponentType;
 import by.itstep.makejt.medicinechest.model.entity.abstracts.*;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.items.*;
 import by.itstep.makejt.medicinechest.model.entity.medicines.*;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -82,14 +84,9 @@ public class RandomMedicineChestBuilder {
 
     public static final double MAX_TOURNIQUET_LENGTH = 1.0;
     public static final double MIN_TOURNIQUET_LENGTH = 0.5;
-    public enum MedicineComponentType {
-        PARACETAMOL, LOPERAMIDE, FENKAROL, AUGMENTIN, EUTHYROX, HERBION, SPAZMALGON,
-        TERAFLU, VALIDOL, VITAMINC, BANDAGE, COTTON, PLASTER, SCISSORS, THERMOMETER, TOURNIQUET;
-    }
 
     public static MedicineChest createMedicineChest() {
         Random random = new Random();
-        //MedicineChest medicineChest = new MedicineChest(new ArrayList<>(), MedicineChest.Name.ADULT)
         MedicineChest medicineChest = new MedicineChest(new ArrayList<>(),
                 MedicineChest.Name.values()[random.nextInt(MedicineChest.Name.values().length)]);
 
@@ -99,6 +96,7 @@ public class RandomMedicineChestBuilder {
         }
         return medicineChest;
     }
+
     private static MedicineChestComponent createMedicineChestComponent() {
         Random random = new Random();
         MedicineChestComponent medicineChestComponent = null;
