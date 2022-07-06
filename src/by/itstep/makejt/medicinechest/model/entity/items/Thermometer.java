@@ -1,56 +1,44 @@
 package by.itstep.makejt.medicinechest.model.entity.items;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Item;
-
 import java.util.Objects;
 
 public class Thermometer extends Item {
-
-    public Type type;
-
+    public ThermometerType thermometerType;
     public Thermometer() {
-        type = Type.MERCURY;
+        thermometerType = ThermometerType.MERCURY;
     }
-
-    public Thermometer(double price, boolean usefulness, Type type) {
+    public Thermometer(double price, boolean usefulness, ThermometerType thermometerType) {
         super(price, usefulness);
-        this.type = type;
+        this.thermometerType = thermometerType;
     }
-
-    public Type getType() {
-        return type;
+    public ThermometerType getType() {
+        return thermometerType;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Thermometer that = (Thermometer) o;
-        return type == that.type;
+        return thermometerType == that.thermometerType;
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), type);
+        return Objects.hash(super.hashCode(), thermometerType);
     }
-
     @Override
     public String toString() {
-        return "Thermometer{" + super.toString() + ", type = " + type.getName() + '}';
+        return "Thermometer{" + super.toString() + ", type = " + thermometerType.getName() + '}';
     }
-
-    public enum Type {
+    public enum ThermometerType {
         MERCURY ("mercury"),
         ELECTRONIC ("electronic"),
         INFRARED ("infrared");
-
         private String name;
-
-        Type(String name) {
+        ThermometerType(String name) {
             this.name = name;
         }
-
         public String getName() {
             return name;
         }

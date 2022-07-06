@@ -12,8 +12,8 @@ public class VitaminC extends Medicine {
         taste = "kiwi";
     }
 
-    public VitaminC(PharmaGroup pharmaGroup, double price, int expDate, int count, String taste) {
-        super(pharmaGroup, price, expDate, count);
+    public VitaminC(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, String taste) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.taste = taste;
     }
 

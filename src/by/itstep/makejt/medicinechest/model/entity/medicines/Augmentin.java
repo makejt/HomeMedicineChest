@@ -12,8 +12,8 @@ public class Augmentin extends Medicine {
         isFreeSold = true;
     }
 
-    public Augmentin(PharmaGroup pharmaGroup, double price, int expDate, int count, boolean isFreeSold) {
-        super(pharmaGroup, price, expDate, count);
+    public Augmentin(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, boolean isFreeSold) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.isFreeSold = isFreeSold;
     }
 

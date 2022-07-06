@@ -12,8 +12,8 @@ public class Herbion extends Medicine {
         isKeepRefrigerated = true;
     }
 
-    public Herbion(PharmaGroup pharmaGroup, double price, int expDate, int count, boolean isKeepRefrigerated) {
-        super(pharmaGroup, price, expDate, count);
+    public Herbion(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, boolean isKeepRefrigerated) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.isKeepRefrigerated = isKeepRefrigerated;
     }
 

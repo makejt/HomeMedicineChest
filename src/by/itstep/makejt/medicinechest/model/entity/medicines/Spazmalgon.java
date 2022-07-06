@@ -12,8 +12,8 @@ public class Spazmalgon extends Medicine {
         dosage = 5;
     }
 
-    public Spazmalgon(PharmaGroup pharmaGroup, double price, int expDate, int count, double dosage) {
-        super(pharmaGroup, price, expDate, count);
+    public Spazmalgon(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, double dosage) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.dosage = dosage;
     }
 

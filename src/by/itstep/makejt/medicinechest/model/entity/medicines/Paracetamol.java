@@ -5,26 +5,21 @@ import by.itstep.makejt.medicinechest.model.entity.abstracts.Medicine;
 import java.util.Objects;
 
 public class Paracetamol extends Medicine {
-
-    public Form form;
+    private FormParacetamolType form;
 
     public Paracetamol() {
-        form = Form.PILL;
+        //formParacetamolType = FormParacetamolType.PILL;
     }
 
-    public Paracetamol(PharmaGroup pharmaGroup, double price, int expDate, int count, Form form) {
-        super(pharmaGroup, price, expDate, count);
+    public Paracetamol(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate,
+                       int count, FormParacetamolType form) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.form = form;
     }
 
-    public Form getForm() {
+    public FormParacetamolType getForm() {
         return form;
     }
-
-    public void setForm(Form form) {
-        this.form = form;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -33,7 +28,6 @@ public class Paracetamol extends Medicine {
         Paracetamol that = (Paracetamol) o;
         return form == that.form;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(super.hashCode(), form);
@@ -45,7 +39,7 @@ public class Paracetamol extends Medicine {
     }
 
 
-    public enum Form {
+    public enum FormParacetamolType {
 
         PILL("pill"),
         CAPSULE("capsule"),
@@ -55,7 +49,7 @@ public class Paracetamol extends Medicine {
 
         private String name;
 
-        Form(String name) {
+        FormParacetamolType(String name) {
             this.name = name;
         }
 

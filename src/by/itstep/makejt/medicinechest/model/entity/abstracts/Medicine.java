@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Medicine extends MedicineChestComponent implements Comparable<Medicine> {
 
-    private PharmaGroup pharmaGroup;
+    private MedicinePharmaGroupType medicinePharmaGroupType;
     private int expDate;
     private int count;
 
@@ -13,15 +13,15 @@ public class Medicine extends MedicineChestComponent implements Comparable<Medic
         count = 0;
     }
 
-    public Medicine(PharmaGroup pharmaGroup, double price, int expDate, int count) {
+    public Medicine(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count) {
         super(price);
-        this.pharmaGroup = pharmaGroup;
+        this.medicinePharmaGroupType = medicinePharmaGroupType;
         this.expDate = expDate;
         this.count = count;
     }
 
-    public String getPharmaGroup() {
-        return pharmaGroup.name;
+    public MedicinePharmaGroupType getPharmaGroup() {
+        return medicinePharmaGroupType;
     }
 
     public int getExpDate() {
@@ -46,7 +46,7 @@ public class Medicine extends MedicineChestComponent implements Comparable<Medic
 
     @Override
     public String toString() {
-        return super.toString() + ", pharmaGroup = " + pharmaGroup.getName() + ", expDate = " +
+        return super.toString() + ", pharmaGroup = " + medicinePharmaGroupType.getName() + ", expDate = " +
                 + expDate + ", count = " + count;
     }
 
@@ -56,17 +56,17 @@ public class Medicine extends MedicineChestComponent implements Comparable<Medic
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Medicine medicine = (Medicine) o;
-        return expDate == medicine.expDate && count == medicine.count && pharmaGroup == medicine.pharmaGroup;
+        return expDate == medicine.expDate && count == medicine.count && medicinePharmaGroupType == medicine.medicinePharmaGroupType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), pharmaGroup, expDate, count);
+        return Objects.hash(super.hashCode(), medicinePharmaGroupType, expDate, count);
     }
 
     @Override
     public int compareTo(Medicine o) {
-        int result = pharmaGroup.compareTo(o.pharmaGroup);
+        int result = medicinePharmaGroupType.compareTo(o.medicinePharmaGroupType);
         if (result == 0) {
             result = Integer.compare(expDate, o.expDate);
         }
@@ -76,7 +76,7 @@ public class Medicine extends MedicineChestComponent implements Comparable<Medic
         return result;
     }
 
-    public enum PharmaGroup {
+    public enum MedicinePharmaGroupType {
         FEBRIFUGE("febrifuge"),
         DIARRHEA("diarrhea"),
         ANTIHISTAMINE("antihistamine"),
@@ -87,12 +87,12 @@ public class Medicine extends MedicineChestComponent implements Comparable<Medic
 
         private String name;
 
-        PharmaGroup(String name) {
+        MedicinePharmaGroupType(String name) {
             this.name = name;
         }
 
         public String getName() {
-            return name;
+            return this.name;
         }
     }
 }

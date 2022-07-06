@@ -52,7 +52,7 @@ public class Plaster extends Item {
 
     @Override
     public String toString() {
-        return "Plaster{" + super.toString() + ", isBactericidal=" + isBactericidal +
+        return "Plaster{" + super.toString() + ", isBactericidal = " + isBactericidal +
                 ", width = " + width + '}';
     }
 }

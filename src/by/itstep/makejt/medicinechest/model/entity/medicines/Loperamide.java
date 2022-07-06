@@ -12,8 +12,8 @@ public class Loperamide extends Medicine {
         producer = "Ukraine";
     }
 
-    public Loperamide(PharmaGroup pharmaGroup, double price, int expDate, int count, String producer) {
-        super(pharmaGroup, price, expDate, count);
+    public Loperamide(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, String producer) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.producer = producer;
     }
 

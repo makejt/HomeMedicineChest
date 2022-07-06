@@ -12,8 +12,8 @@ public class Euthyrox extends Medicine {
         dosage = 25;
     }
 
-    public Euthyrox(PharmaGroup pharmaGroup, double price, int expDate, int count, int dosage) {
-        super(pharmaGroup, price, expDate, count);
+    public Euthyrox(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, int dosage) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.dosage = dosage;
     }
 

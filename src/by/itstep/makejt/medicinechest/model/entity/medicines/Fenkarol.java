@@ -12,8 +12,8 @@ public class Fenkarol extends Medicine {
         dosage = 25;
     }
 
-    public Fenkarol(PharmaGroup pharmaGroup, double price, int expDate, int count, double dosage) {
-        super(pharmaGroup, price, expDate, count);
+    public Fenkarol(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, double dosage) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.dosage = dosage;
     }
 

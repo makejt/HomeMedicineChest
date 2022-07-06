@@ -1,22 +1,24 @@
 package by.itstep.makejt.medicinechest.model.util;
 
 import by.itstep.makejt.medicinechest.model.entity.MedicineComponentType;
-import by.itstep.makejt.medicinechest.model.entity.abstracts.MedicineChestComponent;
+import by.itstep.makejt.medicinechest.model.entity.abstracts.*;
 import by.itstep.makejt.medicinechest.model.entity.conteiner.MedicineChest;
 import by.itstep.makejt.medicinechest.model.entity.items.*;
 import by.itstep.makejt.medicinechest.model.entity.medicines.*;
+import org.apache.log4j.Logger;
 
 import java.io.*;
-
-import static by.itstep.makejt.medicinechest.model.entity.MedicineComponentType.SPAZMALGON;
-
 public class ByteStreamMedicineChestBuilder {
-    private String fileName;
 
+    private static final Logger LOG;
+
+    static {
+        LOG = Logger.getRootLogger();
+    }
+    private String fileName;
     public ByteStreamMedicineChestBuilder(String name) {
         this.fileName = name;
     }
-
     public void saveMedicineChest(MedicineChest medicineChest) throws MedicineChestFileNoFoundException {
         if (fileName == null) {
             throw new MedicineChestFileNoFoundException();
@@ -26,19 +28,23 @@ public class ByteStreamMedicineChestBuilder {
             stream = new DataOutputStream(
                     new BufferedOutputStream(
                             new FileOutputStream(fileName)));
+
+            stream.writeInt(MedicineChest.Name.valueOf(medicineChest.getName().toString()).ordinal());
+
             for (MedicineChestComponent component : medicineChest) {
                 if (component instanceof Paracetamol) {
                     Paracetamol paracetamol = (Paracetamol) component;
                     stream.writeInt(MedicineComponentType.PARACETAMOL.ordinal());
-                    stream.writeUTF(paracetamol.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.FEBRIFUGE.ordinal());
                     stream.writeDouble(paracetamol.getPrice());
                     stream.writeInt(paracetamol.getExpDate());
                     stream.writeInt(paracetamol.getCount());
-                    stream.writeUTF(paracetamol.form.getName());
+                    stream.writeInt(Paracetamol.FormParacetamolType.valueOf
+                            (paracetamol.getForm().toString()).ordinal());
                 } else if (component instanceof Loperamide) {
                     Loperamide loperamide = (Loperamide) component;
                     stream.writeInt(MedicineComponentType.LOPERAMIDE.ordinal());
-                    stream.writeUTF(loperamide.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.DIARRHEA.ordinal());
                     stream.writeDouble(loperamide.getPrice());
                     stream.writeInt(loperamide.getExpDate());
                     stream.writeInt(loperamide.getCount());
@@ -46,14 +52,14 @@ public class ByteStreamMedicineChestBuilder {
                 } else if (component instanceof Fenkarol) {
                     Fenkarol fenkarol = (Fenkarol) component;
                     stream.writeInt(MedicineComponentType.FENKAROL.ordinal());
-                    stream.writeUTF(fenkarol.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.ANTIHISTAMINE.ordinal());
                     stream.writeDouble(fenkarol.getPrice());
                     stream.writeInt(fenkarol.getCount());
                     stream.writeDouble(fenkarol.getDosage());
                 } else if (component instanceof Augmentin) {
                     Augmentin augmentin = (Augmentin) component;
                     stream.writeInt(MedicineComponentType.AUGMENTIN.ordinal());
-                    stream.writeUTF(augmentin.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.FEBRIFUGE.ordinal());
                     stream.writeDouble(augmentin.getPrice());
                     stream.writeInt(augmentin.getExpDate());
                     stream.writeInt(augmentin.getCount());
@@ -61,42 +67,42 @@ public class ByteStreamMedicineChestBuilder {
                 } else if (component instanceof Euthyrox) {
                     Euthyrox euthyrox = (Euthyrox) component;
                     stream.writeInt(MedicineComponentType.EUTHYROX.ordinal());
-                    stream.writeUTF(euthyrox.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.HORMONAL.ordinal());
                     stream.writeDouble(euthyrox.getPrice());
                     stream.writeInt(euthyrox.getCount());
                     stream.writeInt(euthyrox.getDosage());
                 } else if (component instanceof Herbion) {
                     Herbion herbion = (Herbion) component;
                     stream.writeInt(MedicineComponentType.HERBION.ordinal());
-                    stream.writeUTF(herbion.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.FEBRIFUGE.ordinal());
                     stream.writeDouble(herbion.getPrice());
                     stream.writeInt(herbion.getCount());
                     stream.writeBoolean(herbion.isKeepRefrigerated);
                 } else if (component instanceof Spazmalgon) {
                     Spazmalgon spazmalgon = (Spazmalgon) component;
-                    stream.writeInt(SPAZMALGON.ordinal());
-                    stream.writeUTF(spazmalgon.getPharmaGroup());
+                    stream.writeInt(MedicineComponentType.SPAZMALGON.ordinal());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.ANTISPASMODICS.ordinal());
                     stream.writeDouble(spazmalgon.getPrice());
                     stream.writeInt(spazmalgon.getCount());
                     stream.writeDouble(spazmalgon.getDosage());
                 } else if (component instanceof Teraflu) {
                     Teraflu teraflu = (Teraflu) component;
                     stream.writeInt(MedicineComponentType.TERAFLU.ordinal());
-                    stream.writeUTF(teraflu.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.FEBRIFUGE.ordinal());
                     stream.writeDouble(teraflu.getPrice());
                     stream.writeInt(teraflu.getCount());
                     stream.writeUTF(teraflu.getTaste());
                 } else if (component instanceof Validol) {
                     Validol validol = (Validol) component;
                     stream.writeInt(MedicineComponentType.VALIDOL.ordinal());
-                    stream.writeUTF(validol.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.HEART.ordinal());
                     stream.writeDouble(validol.getPrice());
                     stream.writeInt(validol.getCount());
-                    stream.writeUTF(validol.form.getName());
+                    stream.writeUTF(validol.formValidolType.getName());
                 } else if (component instanceof VitaminC) {
                     VitaminC vitaminC = (VitaminC) component;
                     stream.writeInt(MedicineComponentType.VITAMINC.ordinal());
-                    stream.writeUTF(vitaminC.getPharmaGroup());
+                    stream.writeInt(Medicine.MedicinePharmaGroupType.FEBRIFUGE.ordinal());
                     stream.writeDouble(vitaminC.getPrice());
                     stream.writeInt(vitaminC.getCount());
                     stream.writeUTF(vitaminC.getTaste());
@@ -130,7 +136,7 @@ public class ByteStreamMedicineChestBuilder {
                     stream.writeInt(MedicineComponentType.THERMOMETER.ordinal());
                     stream.writeDouble(thermometer.getPrice());
                     stream.writeBoolean(thermometer.isUsefulness());
-                    stream.writeUTF(thermometer.type.getName());
+                    stream.writeInt(Thermometer.ThermometerType.valueOf(thermometer.getType().toString()).ordinal());
                 } else if (component instanceof Tourniquet) {
                     Tourniquet tourniquet = (Tourniquet) component;
                     stream.writeInt(MedicineComponentType.TOURNIQUET.ordinal());
@@ -141,13 +147,13 @@ public class ByteStreamMedicineChestBuilder {
             }
             stream.flush();
         } catch (IOException exception) {
-            System.err.println(exception);
+            LOG.warn(exception);
         } finally {
             if (stream == null) {
                 try {
                     stream.close();
                 } catch (IOException exception) {
-                    System.err.println(exception);
+                    LOG.warn(exception);
                 }
             }
         }
@@ -155,108 +161,125 @@ public class ByteStreamMedicineChestBuilder {
 
     public MedicineChest createMedicineChest() throws MedicineChestFileNoFoundException {
         MedicineChest medicineChest = new MedicineChest();
+
         if (fileName == null) {
             throw new MedicineChestFileNoFoundException();
         }
+
         DataInputStream stream = null;
         try {
             stream = new DataInputStream(
                     new BufferedInputStream(
                             new FileInputStream(fileName)));
-            while (true) {
+
+            medicineChest.name = MedicineChest.Name.values()[stream.readInt()];
+            while (stream.available() != 0) {
+
                 MedicineChestComponent component = null;
+
                 int index = stream.readInt();
+
                 MedicineComponentType type = MedicineComponentType.values()[index];
                 switch (type) {
                     case PARACETAMOL: {
-                        // ???
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
-                        String form = stream.readUTF();
-                        //component = new Paracetamol(pharmaGroup, price, expDate, count, form);
+                        Paracetamol.FormParacetamolType form =
+                                Paracetamol.FormParacetamolType.values()[stream.readInt()];
+                        component = new Paracetamol(medicinePharmaGroupType, price, expDate, count, form);
                     }
                     break;
                     case LOPERAMIDE: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         String producer = stream.readUTF();
-                        //  component = new Loperamide(pharmaGroup, price, expDate, count, producer);
+                        component = new Loperamide(medicinePharmaGroupType, price, expDate, count, producer);
                     }
                     break;
                     case FENKAROL: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         double dosage = stream.readDouble();
-                        //component = new Fenkarol(pharmaGroup, price, expDate, count, dosage);
+                        component = new Fenkarol(medicinePharmaGroupType, price, expDate, count, dosage);
                     }
                     break;
                     case AUGMENTIN: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         boolean isFreeSold = stream.readBoolean();
-                        // component = new Augmentin(pharmaGroup, price, expDate, count, isFreeSold);
+                        component = new Augmentin(medicinePharmaGroupType, price, expDate, count, isFreeSold);
                     }
                     break;
                     case EUTHYROX: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         int dosage = stream.readInt();
-                        // component = new Euthyrox(pharmaGroup, price, expDate, count, dosage);
+                        component = new Euthyrox(medicinePharmaGroupType, price, expDate, count, dosage);
                     }
                     break;
                     case HERBION: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         boolean isKeepRefrigerated = stream.readBoolean();
-                        //   component = new Herbion(pharmaGroup, price, expDate, count, isKeepRefrigerated);
+                        component = new Herbion(medicinePharmaGroupType, price, expDate, count, isKeepRefrigerated);
                     }
                     break;
                     case SPAZMALGON: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         double dosage = stream.readDouble();
-                        // component = new Spazmalgon (pharmaGroup, price, expDate, count, dosage);
+                        component = new Spazmalgon(medicinePharmaGroupType, price, expDate, count, dosage);
                     }
                     break;
                     case TERAFLU: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         String taste = stream.readUTF();
-                        // component = new Teraflu(pharmaGroup, price, expDate, count, taste);
+                        component = new Teraflu(medicinePharmaGroupType, price, expDate, count, taste);
                     }
                     break;
                     case VALIDOL: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
-//                        Validol.FORM form = stream.readUTF();
-//                        component = new Validol(pharmaGroup, price, expDate, count, form);
+                        Validol.FormValidolType form = Validol.FormValidolType.values()[stream.readInt()];
+                        component = new Validol(medicinePharmaGroupType, price, expDate, count, form);
                     }
                     break;
                     case VITAMINC: {
-                        String pharmaGroup = stream.readUTF();
+                        Medicine.MedicinePharmaGroupType medicinePharmaGroupType =
+                                Medicine.MedicinePharmaGroupType.values()[stream.readInt()];
                         double price = stream.readDouble();
                         int expDate = stream.readInt();
                         int count = stream.readInt();
                         String taste = stream.readUTF();
-                        // component = new VitaminC(pharmaGroup, price, expDate, count, taste);
+                        component = new VitaminC(medicinePharmaGroupType, price, expDate, count, taste);
                     }
                     break;
                     case BANDAGE: {
@@ -291,9 +314,8 @@ public class ByteStreamMedicineChestBuilder {
                     case THERMOMETER: {
                         double price = stream.readDouble();
                         boolean usefulness = stream.readBoolean();
-//                        Thermometer.Type type = stream.readUTF();
-//
-//                        component = new Thermometer(price, usefulness, type);
+                        Thermometer.ThermometerType type1 = Thermometer.ThermometerType.values()[stream.readInt()];
+                        component = new Thermometer(price, usefulness, type1);
                     }
                     break;
                     case TOURNIQUET: {
@@ -304,15 +326,17 @@ public class ByteStreamMedicineChestBuilder {
                     }
                     break;
                 }
+                medicineChest.add(component);
             }
+        } catch (EOFException exception) {
         } catch (IOException exception) {
-            System.err.println(exception);
+            LOG.warn(exception);
         } finally {
             if (stream == null) {
                 try {
                     stream.close();
                 } catch (IOException exception) {
-                    System.err.println(exception);
+                    LOG.warn(exception);
                 }
             }
         }

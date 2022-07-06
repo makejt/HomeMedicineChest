@@ -4,7 +4,6 @@ public class MedicineChestFileNoFoundException extends Exception {
 
     public MedicineChestFileNoFoundException() {
     }
-
     public MedicineChestFileNoFoundException(String message) {
         super(message);
     }

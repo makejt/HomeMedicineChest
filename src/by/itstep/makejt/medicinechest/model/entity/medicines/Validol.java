@@ -6,19 +6,19 @@ import java.util.Objects;
 
 public class Validol extends Medicine {
 
-    public FORM form;
+    public FormValidolType formValidolType;
 
     public Validol (){
-        form = FORM.PILL;
+        formValidolType = FormValidolType.PILL;
     }
 
-    public Validol(PharmaGroup pharmaGroup, double price, int expDate, int count, FORM form) {
-        super(pharmaGroup, price, expDate, count);
-        this.form = form;
+    public Validol(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, FormValidolType formValidolType) {
+        super(medicinePharmaGroupType, price, expDate, count);
+        this.formValidolType = formValidolType;
     }
 
-    public FORM getForm() {
-        return form;
+    public FormValidolType getForm() {
+        return formValidolType;
     }
 
     @Override
@@ -27,27 +27,27 @@ public class Validol extends Medicine {
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
         Validol validol = (Validol) o;
-        return form == validol.form;
+        return formValidolType == validol.formValidolType;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), form);
+        return Objects.hash(super.hashCode(), formValidolType);
     }
 
 
     @Override
     public String toString() {
-        return "Validol{" + super.toString() + ", form = " + form.getName() + '}';
+        return "Validol{" + super.toString() + ", form = " + formValidolType.getName() + '}';
     }
 
-    public enum FORM{
+    public enum FormValidolType {
         PILL("pill"),
         CAPSULE("capsule");
 
         private String name;
 
-        FORM(String name) {
+        FormValidolType(String name) {
             this.name = name;
         }
 

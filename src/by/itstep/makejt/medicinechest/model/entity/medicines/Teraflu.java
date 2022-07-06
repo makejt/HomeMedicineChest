@@ -12,8 +12,8 @@ public class Teraflu extends Medicine {
         taste = "lemon";
     }
 
-    public Teraflu(PharmaGroup pharmaGroup, double price, int expDate, int count, String taste) {
-        super(pharmaGroup, price, expDate, count);
+    public Teraflu(MedicinePharmaGroupType medicinePharmaGroupType, double price, int expDate, int count, String taste) {
+        super(medicinePharmaGroupType, price, expDate, count);
         this.taste = taste;
     }
 
