@@ -1,0 +1,238 @@
+INFO	2022-07-07 20:59:47,534	0	root	[main]	read name = ADULT
+INFO	2022-07-07 20:59:47,537	3	root	[main]	Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}
+INFO	2022-07-07 20:59:47,559	25	root	[main]	add Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}
+INFO	2022-07-07 20:59:47,559	25	root	[main]	Loperamide{price = 8.1, pharmaGroup = diarrhea, expDate = 2024, count = 12, producer = Ukraine
+INFO	2022-07-07 20:59:47,560	26	root	[main]	add Loperamide{price = 8.1, pharmaGroup = diarrhea, expDate = 2024, count = 12, producer = Ukraine
+INFO	2022-07-07 20:59:47,560	26	root	[main]	Fenkarol{price = 15.0, pharmaGroup = antihistamine, expDate = 2023, count = 10, dosage = 25.0}
+INFO	2022-07-07 20:59:47,563	29	root	[main]	add Fenkarol{price = 15.0, pharmaGroup = antihistamine, expDate = 2023, count = 10, dosage = 25.0}
+INFO	2022-07-07 20:59:47,563	29	root	[main]	Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}
+INFO	2022-07-07 20:59:47,565	31	root	[main]	add Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}
+INFO	2022-07-07 20:59:47,566	32	root	[main]	Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}
+INFO	2022-07-07 20:59:47,566	32	root	[main]	add Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}
+INFO	2022-07-07 20:59:47,566	32	root	[main]	Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,567	33	root	[main]	add Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,567	33	root	[main]	Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2023, count = 20, dosage = 5.0}
+INFO	2022-07-07 20:59:47,567	33	root	[main]	add Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2023, count = 20, dosage = 5.0}
+INFO	2022-07-07 20:59:47,567	33	root	[main]	Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}
+INFO	2022-07-07 20:59:47,567	33	root	[main]	add Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}
+INFO	2022-07-07 20:59:47,568	34	root	[main]	Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 5, form = capsule}
+INFO	2022-07-07 20:59:47,569	35	root	[main]	add Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 5, form = capsule}
+INFO	2022-07-07 20:59:47,569	35	root	[main]	VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}
+INFO	2022-07-07 20:59:47,569	35	root	[main]	add VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}
+INFO	2022-07-07 20:59:47,569	35	root	[main]	Bandage{price = 2.5, usefulness = true, width = 5}
+INFO	2022-07-07 20:59:47,570	36	root	[main]	add Bandage{price = 2.5, usefulness = true, width = 5}
+INFO	2022-07-07 20:59:47,570	36	root	[main]	Cotton{price = 2.0, usefulness = true, isSterility = true}
+INFO	2022-07-07 20:59:47,570	36	root	[main]	add Cotton{price = 2.0, usefulness = true, isSterility = true}
+INFO	2022-07-07 20:59:47,571	37	root	[main]	Plaster{price = 4.5, usefulness = true, isBactericidal = false, width = 1}
+INFO	2022-07-07 20:59:47,574	40	root	[main]	add Plaster{price = 4.5, usefulness = true, isBactericidal = false, width = 1}
+INFO	2022-07-07 20:59:47,574	40	root	[main]	Scissors{price = 10.5, usefulness = true, size = 8}
+INFO	2022-07-07 20:59:47,575	41	root	[main]	add Scissors{price = 10.5, usefulness = true, size = 8}
+INFO	2022-07-07 20:59:47,575	41	root	[main]	Thermometer{price = 35.0, usefulness = false, type = infrared}
+INFO	2022-07-07 20:59:47,576	42	root	[main]	add Thermometer{price = 35.0, usefulness = false, type = infrared}
+INFO	2022-07-07 20:59:47,576	42	root	[main]	Tourniquet{price = 6.0, usefulness = true, length = 0.5}
+INFO	2022-07-07 20:59:47,576	42	root	[main]	add Tourniquet{price = 6.0, usefulness = true, length = 0.5}
+INFO	2022-07-07 20:59:47,576	42	root	[main]	Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}
+INFO	2022-07-07 20:59:47,577	43	root	[main]	add Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}
+INFO	2022-07-07 20:59:47,577	43	root	[main]	Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine
+INFO	2022-07-07 20:59:47,577	43	root	[main]	add Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine
+INFO	2022-07-07 20:59:47,577	43	root	[main]	Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2024, count = 100, dosage = 100}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2024, count = 100, dosage = 100}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	add Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+INFO	2022-07-07 20:59:47,578	44	root	[main]	Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 2, form = pill}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	add Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 2, form = pill}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	add VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	Bandage{price = 2.5, usefulness = true, width = 8}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	add Bandage{price = 2.5, usefulness = true, width = 8}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	Cotton{price = 2.0, usefulness = true, isSterility = false}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	add Cotton{price = 2.0, usefulness = true, isSterility = false}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	Plaster{price = 5.5, usefulness = true, isBactericidal = true, width = 2}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	add Plaster{price = 5.5, usefulness = true, isBactericidal = true, width = 2}
+INFO	2022-07-07 20:59:47,579	45	root	[main]	Scissors{price = 8.5, usefulness = false, size = 5}
+INFO	2022-07-07 20:59:47,580	46	root	[main]	add Scissors{price = 8.5, usefulness = false, size = 5}
+INFO	2022-07-07 20:59:47,580	46	root	[main]	Thermometer{price = 15.0, usefulness = true, type = mercury}
+INFO	2022-07-07 20:59:47,580	46	root	[main]	add Thermometer{price = 15.0, usefulness = true, type = mercury}
+INFO	2022-07-07 20:59:47,580	46	root	[main]	Tourniquet{price = 6.0, usefulness = true, length = 1.0}
+INFO	2022-07-07 20:59:47,580	46	root	[main]	add Tourniquet{price = 6.0, usefulness = true, length = 1.0}
+INFO	2022-07-07 20:59:47,588	54	root	[main]	MedicineChest ADULT:
+
+Thermometer{price = 35.0, usefulness = false, type = infrared}
+Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}
+Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}
+Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}
+Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+Fenkarol{price = 15.0, pharmaGroup = antihistamine, expDate = 2023, count = 10, dosage = 25.0}
+Thermometer{price = 15.0, usefulness = true, type = mercury}
+Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2023, count = 20, dosage = 5.0}
+Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+Scissors{price = 10.5, usefulness = true, size = 8}
+Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2024, count = 100, dosage = 100}
+Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}
+Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine
+Scissors{price = 8.5, usefulness = false, size = 5}
+Loperamide{price = 8.1, pharmaGroup = diarrhea, expDate = 2024, count = 12, producer = Ukraine
+Tourniquet{price = 6.0, usefulness = true, length = 0.5}
+Tourniquet{price = 6.0, usefulness = true, length = 1.0}
+Plaster{price = 5.5, usefulness = true, isBactericidal = true, width = 2}
+Plaster{price = 4.5, usefulness = true, isBactericidal = false, width = 1}
+Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}
+VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}
+Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 5, form = capsule}
+Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}
+Bandage{price = 2.5, usefulness = true, width = 5}
+Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 2, form = pill}
+Bandage{price = 2.5, usefulness = true, width = 8}
+Cotton{price = 2.0, usefulness = true, isSterility = true}
+Cotton{price = 2.0, usefulness = true, isSterility = false}
+Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}
+Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}
+
+INFO	2022-07-07 20:59:47,589	55	root	[main]	price = 35.0
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 60.0
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 85.0
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 108.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 130.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 147.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 162.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 177.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 189.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 201.2
+INFO	2022-07-07 20:59:47,590	56	root	[main]	price = 211.7
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 220.2
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 228.7
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 237.2
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 245.7
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 253.79999999999998
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 259.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 265.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 271.29999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 275.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 278.69999999999993
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 281.49999999999994
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 284.29999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 286.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 289.29999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 291.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 294.29999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 296.79999999999995
+INFO	2022-07-07 20:59:47,591	57	root	[main]	price = 298.79999999999995
+INFO	2022-07-07 20:59:47,592	58	root	[main]	price = 300.79999999999995
+INFO	2022-07-07 20:59:47,592	58	root	[main]	price = 302.29999999999995
+INFO	2022-07-07 20:59:47,592	58	root	[main]	price = 303.49999999999994
+INFO	2022-07-07 20:59:47,592	58	root	[main]	Total price of all medicine chest components: 303.49999999999994
+
+
+INFO	2022-07-07 20:59:47,592	58	root	[main]	add Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,592	58	root	[main]	add Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}
+INFO	2022-07-07 20:59:47,592	58	root	[main]	add Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,592	58	root	[main]	add Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+INFO	2022-07-07 20:59:47,593	59	root	[main]	add VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}
+INFO	2022-07-07 20:59:47,593	59	root	[main]	add VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}
+INFO	2022-07-07 20:59:47,593	59	root	[main]	add Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}
+INFO	2022-07-07 20:59:47,593	59	root	[main]	add Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}
+INFO	2022-07-07 20:59:47,594	60	root	[main]	Cold medicines: 
+[Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}, Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}, Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}, Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}, VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}, VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}, Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}, Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}]
+
+
+INFO	2022-07-07 20:59:47,595	61	root	[main]	add Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}
+INFO	2022-07-07 20:59:47,595	61	root	[main]	add Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+INFO	2022-07-07 20:59:47,595	61	root	[main]	add Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+INFO	2022-07-07 20:59:47,595	61	root	[main]	add Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}
+INFO	2022-07-07 20:59:47,595	61	root	[main]	add Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}
+INFO	2022-07-07 20:59:47,596	62	root	[main]	Expired medicines: 
+[Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}, Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}, Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}, Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}, Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}]
+
+
+INFO	2022-07-07 20:59:47,596	62	root	[main]	add Thermometer{price = 35.0, usefulness = false, type = infrared}
+INFO	2022-07-07 20:59:47,596	62	root	[main]	add Scissors{price = 8.5, usefulness = false, size = 5}
+INFO	2022-07-07 20:59:47,596	62	root	[main]	Not usefulness items: 
+[Thermometer{price = 35.0, usefulness = false, type = infrared}, Scissors{price = 8.5, usefulness = false, size = 5}]
+
+
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Thermometer{price = 35.0, usefulness = false, type = infrared}
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Scissors{price = 8.5, usefulness = false, size = 5}
+INFO	2022-07-07 20:59:47,597	63	root	[main]	add Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	Shopping list: 
+[Thermometer{price = 35.0, usefulness = false, type = infrared}, Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}, Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}, Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}, Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine, Scissors{price = 8.5, usefulness = false, size = 5}, Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}]
+
+
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Thermometer{price = 35.0, usefulness = false, type = infrared}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Augmentin{price = 25.0, pharmaGroup = febrifuge, expDate = 2020, count = 10, isFreeSold = true}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Fenkarol{price = 17.0, pharmaGroup = antihistamine, expDate = 2021, count = 1, dosage = 30.0}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2021, count = 1, dosage = 5.0}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2020, count = 100, dosage = 50}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Scissors{price = 8.5, usefulness = false, size = 5}
+INFO	2022-07-07 20:59:47,598	64	root	[main]	remove Paracetamol{ price = 1.2, pharmaGroup = febrifuge, expDate = 2020, count = 20, form = pill}
+INFO	2022-07-07 20:59:47,599	65	root	[main]	MedicineChest after cleaning: 
+MedicineChest ADULT:
+
+Herbion{price = 25.0, pharmaGroup = febrifuge, expDate = 2024, count = 2, isKeepRefrigerated = true}
+Augmentin{price = 23.2, pharmaGroup = febrifuge, expDate = 2024, count = 2, isFreeSold = false}
+Herbion{price = 22.0, pharmaGroup = febrifuge, expDate = 2024, count = 1, isKeepRefrigerated = true}
+Fenkarol{price = 15.0, pharmaGroup = antihistamine, expDate = 2023, count = 10, dosage = 25.0}
+Thermometer{price = 15.0, usefulness = true, type = mercury}
+Spazmalgon{price = 12.0, pharmaGroup = antispasmodics, expDate = 2023, count = 20, dosage = 5.0}
+Scissors{price = 10.5, usefulness = true, size = 8}
+Euthyrox{price = 8.5, pharmaGroup = hormonal, expDate = 2024, count = 100, dosage = 100}
+Loperamide{price = 8.5, pharmaGroup = diarrhea, expDate = 2022, count = 1, producer = Ukraine
+Loperamide{price = 8.1, pharmaGroup = diarrhea, expDate = 2024, count = 12, producer = Ukraine
+Tourniquet{price = 6.0, usefulness = true, length = 0.5}
+Tourniquet{price = 6.0, usefulness = true, length = 1.0}
+Plaster{price = 5.5, usefulness = true, isBactericidal = true, width = 2}
+Plaster{price = 4.5, usefulness = true, isBactericidal = false, width = 1}
+Teraflu{price = 2.9, pharmaGroup = febrifuge, expDate = 2024, count = 1, taste = orange}
+VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2025, count = 100, taste = strawberry}
+VitaminC{price = 2.8, pharmaGroup = febrifuge, expDate = 2024, count = 5, taste = orange}
+Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 5, form = capsule}
+Teraflu{price = 2.5, pharmaGroup = febrifuge, expDate = 2024, count = 8, taste = lemon}
+Bandage{price = 2.5, usefulness = true, width = 5}
+Validol{price = 2.5, pharmaGroup = heart, expDate = 2025, count = 2, form = pill}
+Bandage{price = 2.5, usefulness = true, width = 8}
+Cotton{price = 2.0, usefulness = true, isSterility = true}
+Cotton{price = 2.0, usefulness = true, isSterility = false}
+Paracetamol{ price = 1.5, pharmaGroup = febrifuge, expDate = 2024, count = 5, form = capsule}
+
+
+INFO	2022-07-07 20:59:47,599	65	root	[main]	price = 25.0
+INFO	2022-07-07 20:59:47,599	65	root	[main]	price = 48.2
+INFO	2022-07-07 20:59:47,599	65	root	[main]	price = 70.2
+INFO	2022-07-07 20:59:47,599	65	root	[main]	price = 85.2
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 100.2
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 112.2
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 122.7
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 131.2
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 139.7
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 147.79999999999998
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 153.79999999999998
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 159.79999999999998
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 165.29999999999998
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 169.79999999999998
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 172.7
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 175.5
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 178.3
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 180.8
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 183.3
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 185.8
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 188.3
+INFO	2022-07-07 20:59:47,600	66	root	[main]	price = 190.8
+INFO	2022-07-07 20:59:47,601	67	root	[main]	price = 192.8
+INFO	2022-07-07 20:59:47,601	67	root	[main]	price = 194.8
+INFO	2022-07-07 20:59:47,601	67	root	[main]	price = 196.3
+INFO	2022-07-07 20:59:47,601	67	root	[main]	Total price of all medicine chest components after cleaning: 196.3
+
+
