@@ -2,9 +2,8 @@ package by.itstep.makejt.medicinechest.model.entity.items;
 
 import by.itstep.makejt.medicinechest.model.entity.abstracts.Item;
 import java.util.Objects;
-
 public class Thermometer extends Item {
-    public ThermometerType thermometerType;
+    private ThermometerType thermometerType;
     public Thermometer() {
         thermometerType = ThermometerType.MERCURY;
     }
